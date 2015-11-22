@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" android:orientation="vertical"
+    android:layout_width="fill_parent">
+
+    <TableRow android:layout_width="fill_parent"
+        android:id="@+id/TableRow01"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/restaurant_item_imageView" />
+
+        <TextView android:textColor="#000000"
+            android:id="@+id/restaurant_item_textView"
+
+            android:text="title"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_weight="10"
+            android:height="50sp" />
+
+
+    </TableRow>
+
+
+
+
+</TableLayout>
