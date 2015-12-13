@@ -112,12 +112,12 @@ public class DataOperator {
 
     public Restaurant createRestaurant(String name, double latitude, double longitude,
                                        String imageName, String address, String type,
-                                       int upperBound, int lowerBound, int average) {
+                                       int upperBound, int lowerBound, int average, Bitmap image) {
         if (name == null || name.isEmpty())
             return null;
 
         Restaurant restaurant = new Restaurant(name, latitude, longitude, imageName,
-                type, upperBound, lowerBound, average, address);
+                type, upperBound, lowerBound, average, address, image);
         restaurant.saveToLocal();
         addRestaurantToList(restaurant, defaultList);
         return restaurant;
@@ -249,7 +249,7 @@ public class DataOperator {
             return currentList;
     }
 
-    public void createTestData() {
+   /* public void createTestData() {
         //ResList fastList = this.createList("速食");
         final Restaurant kfc = this.createRestaurant("築地鮮魚",
                 1.0,
@@ -279,7 +279,7 @@ public class DataOperator {
                 100,
                 100);
 
-    }
+    }*/
 
     public void cleanTestData() {
         cleanAllLocalData();

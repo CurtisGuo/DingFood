@@ -1,5 +1,6 @@
 package com.ding.dingfood.backend.restaurant;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
 import com.parse.ParseException;
@@ -23,9 +24,10 @@ public class Restaurant {
     private int lowerBound;
     private int average;
     private ParseObject parseObject;
+    private Bitmap bitImage;
 
     public Restaurant(String name, double latitude, double longitude, String imageName,
-                      String type, int upperBound, int lowerBound, int average, String address) {
+                      String type, int upperBound, int lowerBound, int average, String address, Bitmap bitImage) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -36,6 +38,7 @@ public class Restaurant {
         this.upperBound = upperBound;
         this.lowerBound = lowerBound;
         this.average = average;
+        this.bitImage = bitImage;
     }
 
     public Restaurant(ParseObject resObj) {
