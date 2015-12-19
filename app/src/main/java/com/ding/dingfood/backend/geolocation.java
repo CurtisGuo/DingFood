@@ -11,8 +11,6 @@ import android.os.AsyncTask;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
-import com.ding.dingfood.MainActivity;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,21 +44,34 @@ public class geolocation {
     public ArrayList<String> imageREF = new ArrayList<>();
     public ArrayList<Bitmap> image = new ArrayList<>();
     URLConnection conn;
-    //public static Context context;
+    //public static MainActivity context = null;
+   // Context context;
 
     public DataOperator dataOperator = DataOperator.getDataOperator();
     // dataOperator.loadRestaurantLists();
 
-    //---------------------------------------------------------------------------------------------- Constructor
+    public geolocation(){
+        locationManager = null;
+    }
+
     public geolocation(Context context) {
 
-        Context contextMain = MainActivity.getAppContext();
-        locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        locationManager = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
+    }
+
+
+
+
+
+    //---------------------------------------------------------------------------------------------- Constructor
+
+        //Context contextMain = MainActivity.getAppContext();
+        //locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
 
         //setSupportActionBar(toolbar);
-
+    public void initialize(Context context){
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ){
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -71,9 +82,13 @@ public class geolocation {
             // for ActivityCompat#requestPermissions for more details.
 
 
-            Log.d("testIF", "succeed");
-            Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            //Log.d("testIF", "succeed");
+
+            Location location = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+
+
             if (location != null) {
+                Log.d("testIF", "succeed");
                 longitude = String.valueOf(location.getLongitude());
                 latitude = String.valueOf(location.getLatitude());
                 Log.d("longitude", longitude);

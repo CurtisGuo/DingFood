@@ -71,6 +71,7 @@ public class ResList {
             this.parseObject = new ParseObject(Constant.RestaurantList.ClassName);
 
         parseObject.put(Constant.RestaurantList.ListName, this.name);
+        parseObject.getObjectId();
         parseObject.put(Constant.RestaurantList.LastUseTime, this.lastUsed);
         JSONArray restaurantIdsJson = new JSONArray(this.restaurantIds);
         parseObject.put(Constant.RestaurantList.RestaurantID, restaurantIdsJson);

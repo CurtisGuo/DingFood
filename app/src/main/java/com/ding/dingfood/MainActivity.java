@@ -1,9 +1,9 @@
 package com.ding.dingfood;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,9 +16,12 @@ import com.parse.Parse;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
-    public static Context context;
+    //public Context context;
     public GoogleApiClient mGoogleApiClient;
+    //public geolocation geo;
     public geolocation geo;
+    public int i=0;
+    ImageView resPic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,24 +43,32 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .addConnectionCallbacks( this )
                 .addOnConnectionFailedListener( this )
                 .build();
-        context  = this.getApplicationContext();
-         geo = new geolocation(context);
+        //context  = this.getApplicationContext();
+        geo = new geolocation(this);
+        geo.initialize(this);
 
        // googleInfo.locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         //dataOperator.cleanAllLocalData();
         //dataOperator.createTestData();
+        resPic = (ImageView) findViewById(R.id.imageView2);
+        Button button = (Button) findViewById(R.id.nextRes);
+        button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                i++;
+                ImageView imageTest=(ImageView) findViewById(R.id.imageView);
+                TextView textTest=(TextView) findViewById(R.id.textView);
+                textTest.setText(geo.name.get(i));
+                resPic.setImageBitmap(geo.image.get(i));
 
+            }
+        });
     }
 
-    public void DingFoodFromGoogleMap(View v)
-    {
-        ImageView imageTest=(ImageView) findViewById(R.id.imageView);
-        TextView textTest=(TextView) findViewById(R.id.textView);
-        textTest.setText(geo.name.get(0));
-    }
-    public static Context getAppContext() {
+
+
+    /*public static Context getAppContext() {
         return MainActivity.context;
-    }
+    }*/
 
     @Override
     protected void onStart(){
