@@ -171,7 +171,7 @@ public class geolocation{
 
         //random.setText(name.get(0));
        // bye.setImageBitmap(image.get(0));
-        // total data => dataDataNo
+        // total data => jsonDataNo
     }
 
     //----------------------------------------------------------------------------------- Store data into cache
