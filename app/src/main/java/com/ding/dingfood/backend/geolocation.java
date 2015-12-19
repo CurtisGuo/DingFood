@@ -37,6 +37,7 @@ public class geolocation{
     public String googleLocation = new String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=LATITUDE,LONGITUDE&radius=RADIUS&types=food&key=APIKEY");
     public String googleFoodPic = new String("https://maps.googleapis.com/maps/api/place/photo?maxwidth=MAXWIDTH&photoreference=REFERENCE&key=APIKEY");
     public String MAXWIDTH = new String("400");
+    public String RADIUS = new String ("500");
     public String reference = null;
     public int jsonDataNo = 0;
     public LocationManager locationManager;
@@ -45,15 +46,22 @@ public class geolocation{
     public ArrayList<String> imageREF = new ArrayList<>();
     public ArrayList<Bitmap> image = new ArrayList<>();
     URLConnection conn;
+    //public static Context context;
 
     public DataOperator dataOperator = DataOperator.getDataOperator();
     // dataOperator.loadRestaurantLists();
 
-
-    public geolocation() {
+    //---------------------------------------------------------------------------------------------- Constructor
+    public geolocation(Context context) {
 
         Context contextMain = MainActivity.getAppContext();
-        if (ActivityCompat.checkSelfPermission(contextMain, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(contextMain, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+
+        //setSupportActionBar(toolbar);
+
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ){
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -63,10 +71,13 @@ public class geolocation{
             // for ActivityCompat#requestPermissions for more details.
 
 
+            Log.d("testIF", "succeed");
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if (location != null) {
                 longitude = String.valueOf(location.getLongitude());
                 latitude = String.valueOf(location.getLatitude());
+                Log.d("longitude", longitude);
+                Log.d("latitude", latitude);
             }
 
             replaceLatLongKey(); //prepare URL to parse for jsonRestaurantList
@@ -76,17 +87,23 @@ public class geolocation{
         }
     }
 
-    public void buildDataOperator(){
-        new infoAsync().execute();
-    }
+    //---------------------------------------------------------------------------------------------- Threading
+    //---------------------------------------------------------------------------------------------- Build Data
+    //---------------------------------------------------------------------------------------- Store in Operator
+
 
     public void replaceLatLongKey(){
         googleLocation=googleLocation.replace("LATITUDE",latitude);
         googleLocation=googleLocation.replace("LONGITUDE",longitude);
         googleLocation=googleLocation.replace("APIKEY",apikey);
+        googleLocation=googleLocation.replace("RADIUS",RADIUS);
     }
 
+    public void buildDataOperator(){
+        new infoAsync().execute();
+    }
 
+    //---------------------------------------------------------------------------------------------- Threading
 
     class infoAsync extends AsyncTask<Void, Integer, String> {
         protected void onPreExecute() {
@@ -115,44 +132,54 @@ public class geolocation{
         }
     }
 
-    private void updateDataOperator() {
-        for(int i = 0 ; i < jsonDataNo ; i++){
-            dataOperator.createRestaurant(name.get(i),1 ,2 ,"3","4", "5", 6, 7 ,8 ,image.get(i));
-        }
+    //---------------------------------------------------------------------------------- Store in Data Operator
+
+
+     //-------------------------------------------------------------------------------------- Get data from URL
+     public void getRestaurantList(){
+         URL url;
+
+         try {
+             Log.d("get rest list", googleLocation);
+             // get URL content
+             String address=googleLocation;
+             url = new URL(address);
+             conn = url.openConnection();
+
+             // open the stream and put it into BufferedReader
+             BufferedReader br = new BufferedReader(
+                     new InputStreamReader(conn.getInputStream()));
+
+             String inputLine;
+             while ((inputLine = br.readLine()) != null) {
+                 jsonRestaurantList += inputLine;
+                 //System.out.println(inputLine);
+             }
+             Log.i("URL", jsonRestaurantList);
+             br.close();
+
+             //System.out.println("Done");
+
+         } catch (MalformedURLException e) {
+             e.printStackTrace();
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+     }
+
+    private void updateDataOperator() { //-----------------------------CURTIS--------------------add to Parse
+
+        //random.setText(name.get(0));
+       // bye.setImageBitmap(image.get(0));
+        // total data => dataDataNo
     }
 
-    public void getRestaurantList(){
-        URL url;
-
-        try {
-            // get URL content
-            String address=googleLocation;
-            url = new URL(address);
-            conn = url.openConnection();
-
-            // open the stream and put it into BufferedReader
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader(conn.getInputStream()));
-
-            String inputLine;
-            while ((inputLine = br.readLine()) != null) {
-                jsonRestaurantList += inputLine;
-                //System.out.println(inputLine);
-            }
-            Log.i("URL", jsonRestaurantList);
-            br.close();
-
-            //System.out.println("Done");
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    //----------------------------------------------------------------------------------- Store data into cache
 
     public void storeData(){ //stores data temporarily into cache
+
         Log.d("storeData", "" + "store");
+        String temp = "";
         Log.d("final", jsonRestaurantList);
         final JSONObject obj;
         try {
@@ -161,8 +188,19 @@ public class geolocation{
             jsonDataNo = results.length();
             for (int i = 0; i < jsonDataNo; ++i) {
                 final JSONObject places = results.getJSONObject(i);
+
                 name.add(places.getString("name"));
-                imageREF.add(places.getString("photo_reference"));
+                // temp = new String(places.getString("name"));
+                Log.d("store Name", "" + name.get(i));
+                if(places.has("photos")){
+                    JSONArray jsnTMP = places.getJSONArray("photos");
+                    JSONObject jsnOBJ = jsnTMP.getJSONObject(0);
+                    imageREF.add(jsnOBJ.getString("photo_reference"));
+                }
+                else{
+                    imageREF.add("none");
+                }
+                Log.d("img1", imageREF.get(i));
                 image.add(downloadImage(imageREF.get(i)));
                 //mTextView.setText(output);
             }
@@ -171,7 +209,12 @@ public class geolocation{
         }
     }
 
+    //---------------------------------------------------------------------------------------- Download Image
+
     public Bitmap downloadImage(String imgREF){
+        if(imgREF == "none"){ //-------------------------------------------------replace with a default image
+            return null;
+        }
         String imgURL = new String(googleFoodPic);
         imgURL = imgURL.replace("REFERENCE", imgREF);
         imgURL = imgURL.replace("MAXWIDTH", MAXWIDTH);
@@ -185,6 +228,7 @@ public class geolocation{
             connection.connect();
             InputStream input = connection.getInputStream();
             Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            Log.d("image", imgURL);
             return myBitmap;
         } catch (IOException e) {
             e.printStackTrace();

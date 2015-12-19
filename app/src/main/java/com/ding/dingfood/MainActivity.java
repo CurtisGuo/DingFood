@@ -2,7 +2,6 @@ package com.ding.dingfood;
 
 import android.content.Context;
 import android.content.Intent;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -39,10 +38,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .addConnectionCallbacks( this )
                 .addOnConnectionFailedListener( this )
                 .build();
-        this.context  = getApplicationContext();
-        geolocation googleInfo = new geolocation();
+        context  = this.getApplicationContext();
+        geolocation googleInfo = new geolocation(context);
 
-        googleInfo.locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+       // googleInfo.locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         //dataOperator.cleanAllLocalData();
         //dataOperator.createTestData();
 
