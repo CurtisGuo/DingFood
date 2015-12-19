@@ -30,7 +30,7 @@ import java.util.ArrayList;
 /**
  * Created by gene on 11/15/15.
  */
-public class geolocation{
+public class geolocation {
 
     public String longitude, latitude;
     public String apikey = new String("AIzaSyAwUSeOAyzsFKeBWqUizpEH14YrRsaUoh0");

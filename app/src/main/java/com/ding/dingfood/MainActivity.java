@@ -1,14 +1,14 @@
 package com.ding.dingfood;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.ding.dingfood.backend.DataOperator;
 import com.ding.dingfood.backend.geolocation;
-import com.ding.dingfood.frontend.activity.DingFoodActitivy;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.Places;
@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     public static Context context;
     public GoogleApiClient mGoogleApiClient;
+    public geolocation geo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .addOnConnectionFailedListener( this )
                 .build();
         context  = this.getApplicationContext();
-        geolocation googleInfo = new geolocation(context);
+         geo = new geolocation(context);
 
        // googleInfo.locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         //dataOperator.cleanAllLocalData();
@@ -47,7 +49,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     }
 
-
+    public void DingFoodFromGoogleMap(View v)
+    {
+        ImageView imageTest=(ImageView) findViewById(R.id.imageView);
+        TextView textTest=(TextView) findViewById(R.id.textView);
+        textTest.setText(geo.name.get(0));
+    }
     public static Context getAppContext() {
         return MainActivity.context;
     }
@@ -64,15 +71,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     protected void onResume() {
         super.onResume();
 
-        //延遲1.5秒intent activity
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
 
-                Intent intent = new Intent(MainActivity.this, DingFoodActitivy.class);
-                startActivity(intent);
-            }
-        }, 1500);
     }
 
 

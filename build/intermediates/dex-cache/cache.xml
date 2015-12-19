@@ -2,200 +2,200 @@
 <items version="2" >
 
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-e3bddcf902c4a2c5ddaa8a4c65388ceb42a82e1d.jar" />
-    </item>
-    <item
-        jar="/home/gene/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.11.0/6592129dec2caa8791d322c7e4b6b7a30e8eadae/parse-android-1.11.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6592129dec2caa8791d322c7e4b6b7a30e8eadae">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/parse-android-1.11.0-8214170baffc825c386af0fd9e4583020a8759d7.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-a129a1ad5d06378c35e90c1fa19a05e4892753cd.jar" />
-    </item>
-    <item
-        jar="/home/gene/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.3.0/bc535105332645408ef5f1380215cc954b842178/bolts-applinks-1.3.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="bc535105332645408ef5f1380215cc954b842178">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.3.0-c9a7345a9b9a8213989c2dd709bd29d04dcd98a5.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-f6b8656c35db0947a70d8f0d36efd8d72d274f1d.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-d9c0d63b56fe23dae8b5bd69faa5bb4775ee4045.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-8db6b0bdfdbf711ca2b7b2584b0c692a064320af.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-7d4f828680806878522a1e9972b59ba227979b1a.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-3271102b0b8cde36f0ee9824152305962c1ce355.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-2f7354095259403003eb80e9263d909c264f1ac8.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="055783146ba9654a725442563be78cad303aad1f">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-a26c24b7157f989de800384c56e8395c0517b488.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-fe7c7cd5779e37de6f0c9f0b253e7cc0a3728cbd.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-17f88dcfeaff43992e5733507e5406f5a742c0fa.jar" />
-    </item>
-    <item
-        jar="/home/gene/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.3.0/8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c/bolts-tasks-1.3.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.3.0-38810ec312a1be91a7494c8e8d34ca11ceb6f152.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-e9fde086189fc4a7617cee72a2ae68f116375d39.jar" />
-    </item>
-    <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-3e010834018fe711743433466c2f897f5e32aa45.jar" />
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-93d2db43db3170239cb661bc9ff60fdffa7ae2dd.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-93ce14bb29d719c1dc66142d643212dd09520fa7.jar" />
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-6512a55b60db8ca85553bbf4f2b19be8da756639.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-2dc19d07aba74b72ec19b27c1e1f1236b90ee271.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-ffdd815cc9393653b04ba56b410709c961255d43.jar" />
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-6f8e40eda471a8acb5bbdfde92b2f3611acb1ef4.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-fa0f61eb1b4607567b5468c1e68ebd54f63016db.jar" />
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-310ca7c585724cd8646d8838b6b932344ff9e32c.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-a7a351e813fd29ca4bb9d5ba1e48399f2f73893c.jar" />
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-c5c69bbadb33e8b51f2c64c84b734f441800e9b5.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-5c18d71a2cde5a051ceb58b8b8f4b1c4c910688d.jar" />
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-f66cc8bd3a528e262e574f6b649f38ef57fcf60a.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.3.0\bc535105332645408ef5f1380215cc954b842178\bolts-applinks-1.3.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-ec538d8e2e79febbb7b5544bf50d67078b6bdc62.jar" />
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.3.0-957189e82b70d6839c28fe9c8de5c132e27b6143.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-606905fc48e42d523f72069e3dbf18fc0adeff65.jar" />
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-c8089b42f8e31104db66092e56479f583e98344f.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-c4561a8bab2be65aeaaf3e8160ff6a6d2af0b16c.jar" />
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-56cedb6d986e406705936d3b0e7d79b3b2669865.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/jars/classes.jar"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.11.0\6592129dec2caa8791d322c7e4b6b7a30e8eadae\parse-android-1.11.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-c74e1fded8db021bea3f0dd82ab374464a577d90.jar" />
+        sha1="6592129dec2caa8791d322c7e4b6b7a30e8eadae">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\parse-android-1.11.0-4a23e84eb4432e1d86a4630372c0656701d10b7d.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-8ee03959dfe377013e2ada7b368ece57566ad0d8.jar" />
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-2a5006da95aee98a3fbd2838d2d2e991f4681290.jar" />
     </item>
     <item
-        jar="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/classes-a4548533315961c1b96a108d5e9f7506bd4b7a2c.jar" />
-    </item>
-    <item
-        jar="/home/gene/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jar="C:\Users\user\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/home/gene/AndroidStudioProjects/DingFood/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-b9fb319734c83fa53974fa8e40a94ebbfa294e11.jar" />
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-663270283fa374e7034b14be5a187e68c8881c63.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-e954b648f5ad43c50afbceb7d2e401efeb26c75d.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-277d4b2f2be8a85933d0ffa8363dd24b80997dcd.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-ca5dd899f51d13696af3a68998b8f1bc728d57a0.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-6161a8d1476378717a3e0ed1ced2727a49bf678b.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-b5319f1fe5883dff5e61c4a51777ba19a175e868.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.3.0\8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c\bolts-tasks-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.3.0-83a8c9c4a5dae99619578543b9eb2bcaaaf6301f.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-20edaf97c9b71fecea6431698db1eecb0241144d.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-8ada0b7fedb87706ab26c36e695e88c905900dc6.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-7ea29fe4fa5f4de851f98303c032e29d29ba32d0.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-18eb3a3a766a820be145aa81c6801af5f31df5fc.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-64c0d980572474644c2301babb837d0277a80d69.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-4309de736321c85d8a207e4158e8391b0d112486.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-0f43b3e044299354710dcbef34de0fac46ebfc29.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-d22eb5a692e4421cf33cb77670e90327a39045f4.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="C:\Users\user\AndroidStudioProjects\DingFood\app\build\intermediates\pre-dexed\debug\classes-2da3a9b74df946a92d5000e911e83d49676ead54.jar" />
     </item>
 
 </items>
