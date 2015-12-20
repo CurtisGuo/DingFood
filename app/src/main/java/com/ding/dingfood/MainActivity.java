@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public GoogleApiClient mGoogleApiClient;
     //public geolocation geo;
     public geolocation geo;
-    public int i=0;
+    public int resNo=0;
+    public int photoNo=0;
     ImageView resPic;
 
     @Override
@@ -52,13 +53,30 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         //dataOperator.createTestData();
         resPic = (ImageView) findViewById(R.id.imageView2);
         Button button = (Button) findViewById(R.id.nextRes);
+        Button buttonPhoto = (Button) findViewById(R.id.button);
+        buttonPhoto.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(photoNo<geo.jsonPicNo.get(resNo)){
+                    photoNo++;
+                    ImageView imageTest=(ImageView) findViewById(R.id.imageView);
+                    TextView textTest=(TextView) findViewById(R.id.textView);
+                    textTest.setText(geo.name.get(resNo));
+                    resPic.setImageBitmap(geo.image.get(resNo).get(photoNo));
+                }
+                else photoNo=0;
+            }
+        });
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                i++;
-                ImageView imageTest=(ImageView) findViewById(R.id.imageView);
-                TextView textTest=(TextView) findViewById(R.id.textView);
-                textTest.setText(geo.name.get(i));
-                resPic.setImageBitmap(geo.image.get(i));
+                if(resNo<geo.jsonDataNo){
+                    photoNo=0;
+                    ImageView imageTest=(ImageView) findViewById(R.id.imageView);
+                     TextView textTest=(TextView) findViewById(R.id.textView);
+                     textTest.setText(geo.name.get(resNo));
+                    resPic.setImageBitmap(geo.image.get(resNo).get(photoNo));
+                    resNo++;
+                }
+                else resNo=0;
 
             }
         });

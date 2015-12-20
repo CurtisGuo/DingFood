@@ -24,6 +24,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by gene on 11/15/15.
@@ -34,15 +35,22 @@ public class geolocation {
     public String apikey = new String("AIzaSyAwUSeOAyzsFKeBWqUizpEH14YrRsaUoh0");
     public String googleLocation = new String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=LATITUDE,LONGITUDE&radius=RADIUS&types=food&key=APIKEY");
     public String googleFoodPic = new String("https://maps.googleapis.com/maps/api/place/photo?maxwidth=MAXWIDTH&photoreference=REFERENCE&key=APIKEY");
+    public String googlePlaceIDJson = new String ("https://maps.googleapis.com/maps/api/place/details/json?placeid=PLACEID&key=APIKEY");
+    public String getGooglePlaceIDJson_tmp = null;
+    public String placeIDJsonContainer = "";
     public String MAXWIDTH = new String("400");
-    public String RADIUS = new String ("500");
+    public String RADIUS = new String ("300");
     public String reference = null;
+    public List<Bitmap> photoReference = new ArrayList<Bitmap>();
     public int jsonDataNo = 0;
+    public ArrayList<Integer> jsonPicNo = new ArrayList<>();
     public LocationManager locationManager;
     public String jsonRestaurantList = "";
     public ArrayList<String> name = new ArrayList<>();
     public ArrayList<String> imageREF = new ArrayList<>();
-    public ArrayList<Bitmap> image = new ArrayList<>();
+    public ArrayList<String> placeID = new ArrayList<>();
+    //public ArrayList<Bitmap> image = new ArrayList<>();
+    public ArrayList<List<Bitmap>> image = new ArrayList<List<Bitmap>>();
     URLConnection conn;
     //public static MainActivity context = null;
    // Context context;
@@ -147,6 +155,7 @@ public class geolocation {
         }
     }
 
+
     //---------------------------------------------------------------------------------- Store in Data Operator
 
 
@@ -205,9 +214,10 @@ public class geolocation {
                 final JSONObject places = results.getJSONObject(i);
 
                 name.add(places.getString("name"));
-                // temp = new String(places.getString("name"));
                 Log.d("store Name", "" + name.get(i));
-                if(places.has("photos")){
+                placeID.add(places.getString("place_id"));
+                Log.d("place id", "" + placeID.get(i));
+               /* if(places.has("photos")){
                     JSONArray jsnTMP = places.getJSONArray("photos");
                     JSONObject jsnOBJ = jsnTMP.getJSONObject(0);
                     imageREF.add(jsnOBJ.getString("photo_reference"));
@@ -216,10 +226,77 @@ public class geolocation {
                     imageREF.add("none");
                 }
                 Log.d("img1", imageREF.get(i));
-                image.add(downloadImage(imageREF.get(i)));
+                image.add(downloadImage(imageREF.get(i)));*/
                 //mTextView.setText(output);
+                replacePlaceID();//--------------------------------------------------replace API and place ID
+                getPhotoList();//-----------------------------------------------obtain json via URL parsing
+                storePhotos();//-------------------------------------------------download photos
+               // image.add(new ArrayList<Bitmap>());
+                image.add(photoReference);//-------------------------------------------2D array of photos of all Res
+                photoReference = new ArrayList<Bitmap>();
             }
-        } catch (JSONException e) {
+           } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void storePhotos() {//---------------------------------------total photos will be stored in picNo
+        try {                   //-------------------------all photos for a restaurant stored in photoReference
+            JSONObject obj = new JSONObject(placeIDJsonContainer);
+            placeIDJsonContainer = "";
+            JSONObject results = obj.getJSONObject("result");
+            if(results.has("photos")) {
+                JSONArray photoArray = results.getJSONArray("photos");
+                int picNo = photoArray.length();
+                jsonPicNo.add(picNo);
+                for (int i = 0; i < picNo; i++) {
+                    JSONObject jsnOBJ = photoArray.getJSONObject(i);
+                    photoReference.add(downloadImage(jsnOBJ.getString("photo_reference")));
+                }
+            }
+            else {
+                photoReference.add(downloadImage("none"));
+            }
+                Log.d("img", "success");
+            }
+         catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void replacePlaceID() {
+        getGooglePlaceIDJson_tmp=googlePlaceIDJson.replace("APIKEY",apikey);
+        getGooglePlaceIDJson_tmp=getGooglePlaceIDJson_tmp.replace("PLACEID",placeID.get(placeID.size()-1));
+    }
+
+
+    private void getPhotoList() {
+        URL url;
+
+        try {
+            Log.d("get photo", getGooglePlaceIDJson_tmp);
+            // get URL content
+            String address=getGooglePlaceIDJson_tmp;
+            url = new URL(address);
+            conn = url.openConnection();
+
+            // open the stream and put it into BufferedReader
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream()));
+
+            String inputLine;
+            while ((inputLine = br.readLine()) != null) {
+                placeIDJsonContainer += inputLine;
+                //System.out.println(inputLine);
+            }
+            Log.i("full photo list", placeIDJsonContainer);
+            br.close();
+
+            //System.out.println("Done");
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
