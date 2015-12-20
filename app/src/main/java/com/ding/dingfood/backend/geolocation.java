@@ -255,6 +255,7 @@ public class geolocation {
                 }
             }
             else {
+                jsonPicNo.add(0);
                 photoReference.add(downloadImage("none"));
             }
                 Log.d("img", "success");

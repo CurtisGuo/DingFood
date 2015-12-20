@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public GoogleApiClient mGoogleApiClient;
     //public geolocation geo;
     public geolocation geo;
-    public int resNo=0;
+    public Integer resNo=0;
     public int photoNo=0;
     ImageView resPic;
 
@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         Button buttonPhoto = (Button) findViewById(R.id.button);
         buttonPhoto.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(photoNo<geo.jsonPicNo.get(resNo)){
-                    photoNo++;
+                if(photoNo<geo.jsonPicNo.get(resNo-1)){
                     ImageView imageTest=(ImageView) findViewById(R.id.imageView);
                     TextView textTest=(TextView) findViewById(R.id.textView);
-                    textTest.setText(geo.name.get(resNo));
-                    resPic.setImageBitmap(geo.image.get(resNo).get(photoNo));
+                    textTest.setText(geo.name.get(resNo-1));
+                    resPic.setImageBitmap(geo.image.get(resNo-1).get(photoNo));
+                    photoNo++;
                 }
                 else photoNo=0;
             }
