@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         Button buttonPhoto = (Button) findViewById(R.id.button);
         buttonPhoto.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(photoNo<geo.jsonPicNo.get(resNo-1)){
+                if(photoNo<geo.jsonPicNo.get(resNo-1)){//photo
                     ImageView imageTest=(ImageView) findViewById(R.id.imageView);
                     TextView textTest=(TextView) findViewById(R.id.textView);
                     textTest.setText(geo.name.get(resNo-1));
