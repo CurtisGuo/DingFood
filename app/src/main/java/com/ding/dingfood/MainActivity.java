@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         DataOperator dataOperator = DataOperator.getDataOperator();
         dataOperator.loadRestaurantLists();
 
-//randomgugu
         mGoogleApiClient = new GoogleApiClient
                 .Builder( this )
                 .enableAutoManage( this, 0, this )
