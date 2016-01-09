@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:id="@+id/bottomLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:onClick="HistoryTab"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="1dp">
+        <ImageView
+            android:id="@+id/tab_image1"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="1dp"
+            android:src="@mipmap/ic_history_white_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:onClick="MainTab"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="1dp">
+        <ImageView
+            android:id="@+id/tab_image2"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="1dp"
+            android:src="@mipmap/ic_lightbulb_outline_white_24dp"
+            android:tint="@color/colorPrimaryDark" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:contextClickable="false"
+        android:onClick="ListTab"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="1dp">
+        <ImageView
+            android:id="@+id/tab_image3"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="1dp"
+            android:src="@mipmap/ic_list_white_24dp"
+            android:tint="@color/colorPrimaryDark" />
+    </LinearLayout>
+</LinearLayout>

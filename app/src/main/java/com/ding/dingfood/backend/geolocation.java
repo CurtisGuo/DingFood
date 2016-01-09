@@ -1,6 +1,7 @@
 package com.ding.dingfood.backend;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -11,6 +12,8 @@ import android.os.AsyncTask;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.widget.ProgressBar;
+
+import com.ding.dingfood.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,6 +35,8 @@ import java.util.List;
  */
 public class geolocation {
     private ProgressBar progressBar;
+
+    public Activity activity;
 
     public String longitude, latitude;
     public String apikey = new String("AIzaSyAwUSeOAyzsFKeBWqUizpEH14YrRsaUoh0");
@@ -84,6 +89,7 @@ public class geolocation {
 
         //setSupportActionBar(toolbar);
     public void initialize(Context context){
+        this.activity =  (Activity) context;
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ){
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -137,6 +143,7 @@ public class geolocation {
     class infoAsync extends AsyncTask<Void, Integer, String> {
         protected void onPreExecute() {
             Log.d("PreExceute", "On pre Exceute......");
+            progressBar = (ProgressBar) activity.findViewById(R.id.action_settings);
           //  prgs.setMax(100);
         }
 

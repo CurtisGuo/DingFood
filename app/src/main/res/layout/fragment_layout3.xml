@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:id="@+id/default_layout">
+
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/edit_layout1">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/imageView4"
+                    android:layout_gravity="center"
+                    android:tint="@color/colorTextDark"
+                    android:src="@mipmap/ic_mode_edit_black_24dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/Res_nameLayout"
+                android:clickable="true"
+                android:onClick="gotoDefaultListItemPage">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Default"
+                    android:id="@+id/textView3"
+                    android:textSize="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@string/button_textFamily"
+                    android:textColor="@color/colorTextDark" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox"
+                    android:layout_gravity="center"
+                    android:checked="true" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/backline"
+            android:background="#808080" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/backline2"
+            android:background="#b3b3b3" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:id="@+id/linearLayout3" >
+
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/frameLayout" >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center"
+                    android:tint="@color/colorTextDark"
+                    android:src="@mipmap/ic_mode_edit_black_24dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/frameLayout2"
+                android:clickable="true"
+                android:onClick="gotoListItemPage">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="User"
+                    android:id="@+id/textView4"
+                    android:textSize="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@string/button_textFamily"
+                    android:textColor="@color/colorTextDark" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox2"
+                    android:layout_gravity="center"
+                    android:checked="false" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/backline3"
+            android:background="#808080" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/backline4"
+            android:background="#b3b3b3" />
+    </LinearLayout>
+
+</LinearLayout>

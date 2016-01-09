@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTextLight">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#4f5cbd"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="gotoMainActivity"
+            android:id="@+id/facebookButton_layout">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="1dp"
+                android:background="#4f5cbd"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="facebook"
+                    android:id="@+id/textView"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:fontFamily="@string/button_textFamily"
+                    android:textSize="24dp" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center">
+
+            <FrameLayout
+                android:layout_width="125dp"
+                android:layout_height="48dp"
+                android:id="@+id/signinButton_layout"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTextLight"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="SIGN IN"
+                        android:id="@+id/textView8"
+                        android:layout_gravity="center"
+                        android:fontFamily="@string/button_textFamily"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="20dp" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="125dp"
+                android:layout_height="48dp"
+                android:id="@+id/signuoButton_layout"
+                android:layout_marginLeft="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="SIGN UP"
+                    android:id="@+id/textView9"
+                    android:layout_gravity="center"
+                    android:fontFamily="@string/button_textFamily"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="20dp" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

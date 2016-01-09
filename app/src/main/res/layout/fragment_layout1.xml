@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="1"
+                android:id="@+id/data1_layout"
+                android:layout_marginTop="4dp" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:layout_weight="0.9" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:alpha="0.6"
+                    android:baselineAligned="false"
+                    android:layout_weight="0.1"
+                    android:id="@+id/data1_infobar" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/data1_name"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/data1_info"
+                        android:layout_marginRight="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:onClick="detailOne" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="0dp"
+                android:weightSum="1"
+                android:id="@+id/data2_layout" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:layout_weight="0.9" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="#ffffff"
+                    android:alpha="0.6"
+                    android:id="@+id/data2_infobar" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/data2_name"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/data2_info"
+                        android:layout_marginRight="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:onClick="detailTwo" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="1"
+                android:id="@+id/data3_layout"
+                android:layout_marginTop="4dp" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:layout_weight="0.9" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="#ffffff"
+                    android:alpha="0.6"
+                    android:id="@+id/data3_infobar" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/data3_name"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/data3_info"
+                        android:layout_marginRight="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:onClick="detailThree" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

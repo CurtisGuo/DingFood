@@ -1,0 +1,50 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signin_logo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/colorTextLight">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorTextLight"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ding"
+                android:id="@+id/textView2"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="48sp"
+                android:fontFamily="sans-serif-light"
+                android:focusableInTouchMode="false"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="FOOD"
+                android:id="@+id/textView6"
+                android:textColor="@color/colorPrimary"
+                android:textSize="48sp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_marginLeft="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

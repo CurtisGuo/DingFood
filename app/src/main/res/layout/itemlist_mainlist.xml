@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/imageView5"
+                android:background="#808080" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/imageView8"
+                android:background="#b3b3b3" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/itemblock1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/linearLayout4" >
+
+                    <FrameLayout
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/frameLayout3"
+                        android:background="@mipmap/chickenrice"
+                        android:layout_marginLeft="4dp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/frameLayout4"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="The Chicken Rice Shop"
+                            android:id="@+id/textView14"
+                            android:textSize="@dimen/item_main_text_size"
+                            android:layout_gravity="center_vertical|top"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@string/button_textFamily"
+                            android:textColor="@color/colorTextDark"
+                            android:layout_marginTop="16dp" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView7"
+                    android:background="#808080" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView6"
+                    android:background="#b3b3b3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/itemblock2" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/linearLayout5" >
+
+                    <FrameLayout
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/frameLayout5"
+                        android:background="@mipmap/italynoodle"
+                        android:layout_marginLeft="4dp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/frameLayout6"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Jun&apos;s Restaurant"
+                            android:id="@+id/textView15"
+                            android:textSize="@dimen/item_main_text_size"
+                            android:layout_gravity="center_vertical|top"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@string/button_textFamily"
+                            android:textColor="@color/colorTextDark"
+                            android:layout_marginTop="16dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView9"
+                    android:background="#808080" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView10"
+                    android:background="#b3b3b3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/itemblock3" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/linearLayout6" >
+
+                    <FrameLayout
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/frameLayout7"
+                        android:background="@mipmap/burger"
+                        android:layout_marginLeft="4dp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/frameLayout8"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Family Place"
+                            android:id="@+id/textView16"
+                            android:textSize="@dimen/item_main_text_size"
+                            android:layout_gravity="center_vertical|top"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@string/button_textFamily"
+                            android:textColor="@color/colorTextDark"
+                            android:layout_marginTop="16dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView11"
+                    android:background="#808080" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView12"
+                    android:background="#b3b3b3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/itemblock4" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/linearLayout8" >
+
+                    <FrameLayout
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/frameLayout9"
+                        android:background="@mipmap/junburger"
+                        android:layout_marginLeft="4dp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/frameLayout10"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Jun&apos;s Burger"
+                            android:id="@+id/textView17"
+                            android:textSize="@dimen/item_main_text_size"
+                            android:layout_gravity="center_vertical|top"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@string/button_textFamily"
+                            android:textColor="@color/colorTextDark"
+                            android:layout_marginTop="16dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView13"
+                    android:background="#808080" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView14"
+                    android:background="#b3b3b3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/itemblock5" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/linearLayout7" >
+
+                    <FrameLayout
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/frameLayout11"
+                        android:background="@mipmap/silverspoon"
+                        android:layout_marginLeft="4dp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/frameLayout12"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Silver Spoon"
+                            android:id="@+id/textView18"
+                            android:textSize="@dimen/item_main_text_size"
+                            android:layout_gravity="center_vertical|top"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@string/button_textFamily"
+                            android:textColor="@color/colorTextDark"
+                            android:layout_marginTop="16dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView15"
+                    android:background="#808080" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/imageView16"
+                    android:background="#b3b3b3" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:id="@+id/signintab"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16sp"
+            android:text="SIGN IN"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorTextfocused"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/signuptab"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:text="SIGN UP"
+            android:textColor="@color/colorTextUnfocuse"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+</LinearLayout>
