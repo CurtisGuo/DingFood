@@ -411,9 +411,9 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
 
             sendData.Name=addData.Name;
             sendData.src=addData.src;
-            mainResName.setText(addData.Name);
-            mainResImage.setBackground(getResources().getDrawable(addData.src));
-            // mainResImage.setImageBitmap(Geolocation.image.get(0));
+            mainResName.setText(geo.name.get(0));
+           // mainResImage.setBackground(getResources().getDrawable(addData.src));
+             mainResImage.setImageBitmap(geo.image.get(0).get(0));
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
             dingcount++;
@@ -426,8 +426,11 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
             sendData.Name=addData.Name;
             sendData.src=addData.src;
 
-            mainResName.setText(addData.Name);
-            mainResImage.setBackground(getResources().getDrawable(addData.src));
+           // mainResName.setText(addData.Name);
+          //  mainResImage.setBackground(getResources().getDrawable(addData.src));
+
+            mainResName.setText(geo.name.get(1));
+            mainResImage.setImageBitmap(geo.image.get(1).get(0));
 
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
@@ -440,8 +443,11 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
             addData.src=R.mipmap.nola;
             sendData.Name=addData.Name;
             sendData.src=addData.src;
-            mainResName.setText(addData.Name);
-            mainResImage.setBackground(getResources().getDrawable(addData.src));
+        //    mainResName.setText(addData.Name);
+        //    mainResImage.setBackground(getResources().getDrawable(addData.src));
+
+            mainResName.setText(geo.name.get(2));
+            mainResImage.setImageBitmap(geo.image.get(2).get(0));
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
             dingcount++;
