@@ -10,6 +10,7 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+import android.widget.ProgressBar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,6 +31,7 @@ import java.util.List;
  * Created by gene on 11/15/15.
  */
 public class geolocation {
+    private ProgressBar progressBar;
 
     public String longitude, latitude;
     public String apikey = new String("AIzaSyAwUSeOAyzsFKeBWqUizpEH14YrRsaUoh0");
@@ -42,14 +44,16 @@ public class geolocation {
     public String RADIUS = new String ("300");
     public String reference = null;
     public List<Bitmap> photoReference = new ArrayList<Bitmap>();
-    public int jsonDataNo = 0;
-    public ArrayList<Integer> jsonPicNo = new ArrayList<>();
     public LocationManager locationManager;
     public String jsonRestaurantList = "";
-    public ArrayList<String> name = new ArrayList<>();
     public ArrayList<String> imageREF = new ArrayList<>();
     public ArrayList<String> placeID = new ArrayList<>();
     //public ArrayList<Bitmap> image = new ArrayList<>();
+
+
+    public int jsonDataNo = 0;
+    public ArrayList<Integer> jsonPicNo = new ArrayList<>();
+    public ArrayList<String> name = new ArrayList<>();
     public ArrayList<List<Bitmap>> image = new ArrayList<List<Bitmap>>();
     URLConnection conn;
     //public static MainActivity2 context = null;
@@ -126,12 +130,16 @@ public class geolocation {
         new infoAsync().execute();
     }
 
+
+
     //---------------------------------------------------------------------------------------------- Threading
 
     class infoAsync extends AsyncTask<Void, Integer, String> {
         protected void onPreExecute() {
             Log.d("PreExceute", "On pre Exceute......");
+          //  prgs.setMax(100);
         }
+
 
         protected String doInBackground(Void... arg0) {
             Log.d("DoINBackGround", "On doInBackground...");
@@ -146,8 +154,12 @@ public class geolocation {
             return "You are at PostExecute";
         }
 
-        protected void onProgressUpdate(Integer... a) {
+      /*  protected void onProgressUpdate(Integer... a) {
             Log.d("update", "You are in progress update ... " + a[0]);
+            mProgressDialog.setProgress(Integer.parseInt(progress[0]));
+        }*/
+        protected void onProgressUpdate(String... progress) {
+        //    prgs.setProgress(10);
         }
 
         protected void onPostExecute(String result) {

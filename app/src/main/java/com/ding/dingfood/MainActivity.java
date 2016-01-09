@@ -39,6 +39,8 @@ import java.util.List;
 public class MainActivity extends FragmentActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks,SensorEventListener {
 
     //public Context context;
+    public Integer looper = 0;
+
     public GoogleApiClient mGoogleApiClient;
     //public geolocation geo;
     public geolocation geo;
@@ -382,6 +384,9 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
 
     public void DingFood()
     {
+        if(looper == geo.jsonDataNo){
+            looper = 0;
+        }
 
         firsttime=1;
         TextView mainAddress= (TextView) findViewById(R.id.main_address);
@@ -411,9 +416,15 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
 
             sendData.Name=addData.Name;
             sendData.src=addData.src;
-            mainResName.setText(geo.name.get(0));
+            mainResName.setText(geo.name.get(looper));
            // mainResImage.setBackground(getResources().getDrawable(addData.src));
-             mainResImage.setImageBitmap(geo.image.get(0).get(0));
+            if(geo.image.get(looper).get(0) == null){
+                mainResImage.setImageResource(R.mipmap.nophoto);
+            }
+            else{
+                mainResImage.setImageBitmap(geo.image.get(looper).get(0));
+            }
+
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
             dingcount++;
@@ -429,8 +440,13 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
            // mainResName.setText(addData.Name);
           //  mainResImage.setBackground(getResources().getDrawable(addData.src));
 
-            mainResName.setText(geo.name.get(1));
-            mainResImage.setImageBitmap(geo.image.get(1).get(0));
+            if(geo.image.get(looper).get(0) == null){
+                mainResImage.setImageResource(R.mipmap.nophoto);
+            }
+            else{
+                mainResImage.setImageBitmap(geo.image.get(looper).get(0));
+            }
+            mainResName.setText(geo.name.get(looper));
 
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
@@ -445,9 +461,13 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
             sendData.src=addData.src;
         //    mainResName.setText(addData.Name);
         //    mainResImage.setBackground(getResources().getDrawable(addData.src));
-
-            mainResName.setText(geo.name.get(2));
-            mainResImage.setImageBitmap(geo.image.get(2).get(0));
+            if(geo.image.get(looper).get(0) == null){
+                mainResImage.setImageResource(R.mipmap.nophoto);
+            }
+            else{
+                mainResImage.setImageBitmap(geo.image.get(looper).get(0));
+            }
+            mainResName.setText(geo.name.get(looper));
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
             dingcount++;
@@ -460,6 +480,7 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
             dingcount=0;
             viewPager1.setCurrentItem(0);
         }
+        looper++;
 
     }
     //----------------------------------------------------------------------------------------HistoryTab
