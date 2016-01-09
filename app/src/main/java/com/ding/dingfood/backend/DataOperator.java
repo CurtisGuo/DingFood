@@ -249,83 +249,10 @@ public class DataOperator {
             return currentList;
     }
 
-   /* public void createTestData() {
-        //ResList fastList = this.createList("速食");
-        final Restaurant kfc = this.createRestaurant("築地鮮魚",
-                1.0,
-                2.0,
-                "zhudi",
-                "XXXXXXXX",
-                "速食",
-                100,
-                100,
-                100);
-        Restaurant mac = this.createRestaurant("麥當勞",
-                3.0,
-                4.0,
-                "mac",
-                "XXXXXXXX",
-                "速食",
-                100,
-                100,
-                100);
-        Restaurant mb = this.createRestaurant("銀湯匙",
-                5.0,
-                6.0,
-                "silver",
-                "XXXXXXXX",
-                "速食",
-                100,
-                100,
-                100);
-
-    }*/
 
     public void cleanTestData() {
         cleanAllLocalData();
     }
 
 
-    /* demo code.
-
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "BOiMs1Hj1bSLyLb1p3IHAtRtjQpE4wvOHUtUjnyX", "DCYjcPjkyyHg21qN0MOsrKjso0dTVkdB1Gf8AcEH");
-
-        final DataOperator dataOperator = DataOperator.getDataOperator();
-        boolean res = dataOperator.loadRestaurantLists();
-
-
-
-        Button button = (Button) findViewById(R.id.button);
-        final ImageView imageView = (ImageView)findViewById(R.id.imageView);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dataOperator.showImage(dataOperator.getCurrentList().randomRestaurant(), imageView, MainActivity.this);
-            }
-        });
-    */
-
-    /*
-    public void signupUser(String username, String passwd, String email) {
-        ParseUser user = new ParseUser();
-        user.setUsername("my name");
-        user.setPassword("my pass");
-        user.setEmail("email@example.com");
-
-        user.put("phone", "650-253-0000");
-
-        user.signUpInBackground(new SignUpCallback() {
-            public void done(ParseException e) {
-                if (e == null) {
-                    // Hooray! Let them use the app now.
-                } else {
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
-                }
-            }
-        });
-    }
-    */
 }

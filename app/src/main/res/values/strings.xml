@@ -1,18 +1,7 @@
 <resources>
-    <string name="app_name">DingFood</string>
-    <string name="action_settings">Settings</string>
-    <string name="shakeText1">11111DingFooddsda
-    dsadasdsadasdasddfgdgdggdgdgdddfdggdasdadadsadasdasddfgdgdggdgdgdddfdgg
-        dsadasdasddfgdgdggdgdgdddfdggdsadasdasddsadasdasddsadasdasddsadasdasddfgdgdggdgdgdddfdgg
-         dsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsa
-        dsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsa
-    </string>
-    <string name="shakeText2">22222DingFooddsda
-    dsadasdsadasdasddfgdgdggdgdgdddfdggdasdadadsadasdasddfgdgdggdgdgdddfdgg
-        dsadasdasddfgdgdggdgdgdddfdggdsadasdasddsadasdasddsadasdasddsadasdasddfgdgdggdgdgdddfdgg
-         dsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsa
-        dsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsadasdasddsa
-    </string>
+    <string name="app_name">dingFood</string>
+    <string name="button_textFamily">sans-serif-light</string>
+    <string name="regular_textFamily">sans-serif</string>
 
 
 </resources>

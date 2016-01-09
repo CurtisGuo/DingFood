@@ -52,7 +52,7 @@ public class geolocation {
     //public ArrayList<Bitmap> image = new ArrayList<>();
     public ArrayList<List<Bitmap>> image = new ArrayList<List<Bitmap>>();
     URLConnection conn;
-    //public static MainActivity context = null;
+    //public static MainActivity2 context = null;
    // Context context;
 
     public DataOperator dataOperator = DataOperator.getDataOperator();
@@ -73,7 +73,7 @@ public class geolocation {
 
     //---------------------------------------------------------------------------------------------- Constructor
 
-        //Context contextMain = MainActivity.getAppContext();
+        //Context contextMain = MainActivity2.getAppContext();
         //locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 

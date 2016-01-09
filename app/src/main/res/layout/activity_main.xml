@@ -1,46 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:orientation="vertical">
 
+    <include layout="@layout/top_layout"/>
 
-    <ImageView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="0dp"
+        android:background="@color/colorTextUnfocuse"
+        android:layout_weight="1" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+    <include layout="@layout/bottom_layout"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="next"
-        android:id="@+id/nextRes"
-        android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        android:onClick="DingFoodFromGoogleMap" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:layout_weight="0.92" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PHOTO"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal" />
 </LinearLayout>
