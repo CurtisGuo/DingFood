@@ -2,6 +2,7 @@
     <string name="app_name">dingFood</string>
     <string name="button_textFamily">sans-serif-light</string>
     <string name="regular_textFamily">sans-serif</string>
+    <string name="title_activity_map_page">MapPage</string>
 
 
 </resources>

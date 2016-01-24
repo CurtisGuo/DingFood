@@ -28,6 +28,7 @@ import com.ding.dingfood.frontend.FragmentFirst;
 import com.ding.dingfood.frontend.FragmentSecond;
 import com.ding.dingfood.frontend.FragmentThird;
 import com.ding.dingfood.frontend.ListItemPage;
+import com.ding.dingfood.frontend.MapPage;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.Places;
@@ -38,16 +39,15 @@ import java.util.List;
 
 public class MainActivity extends FragmentActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks,SensorEventListener {
 
-    //public Context context;
-    public Integer looper = 0;
+    static public Integer looper = 0;
 
     public GoogleApiClient mGoogleApiClient;
     //public geolocation geo;
-    public geolocation geo;
+    static public geolocation geo;
     public Integer resNo=0;
     public int photoNo=0;
     ImageView resPic;
-    static String Tag = "MainActivity2";
+    static String Tag = "MainActivity";
     //注意:導入時均爲support.v4.app/view 保持一致
     public static ViewPager viewPager1;
     public static Context context;
@@ -62,6 +62,7 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
     public SensorManager sm;
     public Sensor sr;
     private int delay=0;
+
 
     public class Restaurant
     {
@@ -219,7 +220,16 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
         }
 
     }
+    //----------------------------------------------------------------------------------------gotoMap
+    public void gotoMap(View v)
+    {
+        if(firsttime!=0)
+        {
+            Intent it = new Intent(this,MapPage.class);
+            startActivity(it);
+        }
 
+    }
     public void detailOne(View v)
     {
         sendData.Name=RestaurantDataList.get(0).Name;
@@ -390,7 +400,6 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
 
         firsttime=1;
         TextView mainAddress= (TextView) findViewById(R.id.main_address);
-        mainAddress.setText("1001 Ta Hsueh Road, Hsinchu");
         FrameLayout mapButton= (FrameLayout) findViewById(R.id.main_mapbutton);
         TextView detailText=(TextView) findViewById(R.id.main_moreDetailText);
 
@@ -416,7 +425,9 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
 
             sendData.Name=addData.Name;
             sendData.src=addData.src;
+
             mainResName.setText(geo.name.get(looper));
+            mainAddress.setText(geo.distance.get(looper));
            // mainResImage.setBackground(getResources().getDrawable(addData.src));
             if(geo.image.get(looper).get(0) == null){
                 mainResImage.setImageResource(R.mipmap.nophoto);
@@ -447,7 +458,7 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
                 mainResImage.setImageBitmap(geo.image.get(looper).get(0));
             }
             mainResName.setText(geo.name.get(looper));
-
+            mainAddress.setText(geo.distance.get(looper));
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
             dingcount++;
@@ -468,6 +479,7 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
                 mainResImage.setImageBitmap(geo.image.get(looper).get(0));
             }
             mainResName.setText(geo.name.get(looper));
+            mainAddress.setText(geo.distance.get(looper));
             RestaurantDataList.set(dingcount, addData);
             fragmentFirst.storeData();
             dingcount++;
